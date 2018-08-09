@@ -1,4 +1,4 @@
-# Bhim Pipeline Container 
+# Bhim Pipeline Container
 # Morey Lab
 # Automated Build - Step 2
 
@@ -26,8 +26,6 @@ RUN echo "Installing AFNI & its dependencies..." && echo && \
 	tcsh @update.afni.binaries -package linux_ubuntu_16_64  -do_extras && \
 	echo && echo "Setting up AFNI config..." && echo && \
 	cp $HOME/abin/AFNI.afnirc $HOME/.afnirc && \
-	echo && echo "Updating SUMA env..." && echo && \
-	suma -update_env && \
 	echo && echo "Downloading and installing CD library..." && echo && \
 	curl -O https://afni.nimh.nih.gov/pub/dist/edu/data/CD.tgz && \
 	tar xvzf CD.tgz && cd CD && tcsh s2.cp.files . ~ && cd .. && rm CD.tgz && \
